@@ -6,6 +6,8 @@ Genius era um brinquedo muito popular na década de 1980. Distribuído pela Estr
 
 Nesse repositório você encontra os *files* de um projeto de um jogo Genius completo, construído com HTML, CSS e Javascript.
 
+Confira como ficou o projeto finalizado (https://imgur.com/gallery/IzNzBgk).
+
 ## O que aprendi ao terminar esse projeto:
 
 - CSS
