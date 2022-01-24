@@ -86,8 +86,7 @@ const padListener = (e) => {
 	if(_data.playerSequence[currentMove] !== _data.gameSequence[currentMove]){
 		_data.playerCanPlay = false;
 		disablePads();
-		window.alert("Errou - conferir direção correta");
-		playSequence();
+		resetOrPlayAgain();
 	}else if(currentMove === _data.gameSequence.length - 1){
 		newColor();
 		playSequence();
@@ -116,6 +115,13 @@ const setScore = () => {
 }
 
 const newColor = () => {
+	if(_data.score === 20){
+		blink("**", () => {
+			startGame();
+		});
+		return;	
+	}
+
 	_data.gameSequence.push(Math.floor(Math.random() * 4));
 	_data.score++;
 
@@ -197,12 +203,25 @@ const waitForPlayerClick = () => {
 		}
 
 		disablePads();
-		playSequence();
+		resetOrPlayAgain();
 	}, 5000);
 }
 
 const resetOrPlayAgain = () => {
+	_data.playerCanPlay = false;
 
+	if(_data.strict){
+		blink("!!", () => {
+			_data.score = 0;
+			_data.gameSequence = [];
+			startGame();
+		});
+	}else{
+		blink("!!", () => {
+			setScore();
+			playSequence();
+		});
+	}
 }
 
 const changePadCursor = (cursorType) => {
