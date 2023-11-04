@@ -42,7 +42,7 @@ html{
 }
 
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+	background-image: url('https://img.freepik.com/fotos-premium/textura-sem-costura-de-whbackground-gradiente-preto-sobreposicao-de-fundo-abstrato-preto_661047-669.jpg');
 	font-family: "Bungee", Verdana, sans-serif;
 }
 
@@ -282,6 +282,7 @@ footer{
 	text-align: center;
 	margin-top: 5rem;
 	font-size: 2rem;
+	color: white;
 }
 
 @media (max-width:600px){
